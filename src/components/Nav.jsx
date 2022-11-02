@@ -20,7 +20,7 @@ function Nav() {
               alt=""
             />
             <figure className="block sm:hidden">
-              <img src={logo} className="w-full h-24" alt="" />
+              <img src={logo} className="w-[122.16px] h-24" alt="" />
             </figure>
           </li>
           <div className="flex justify-evenly gap-2 sm:justify-between">
