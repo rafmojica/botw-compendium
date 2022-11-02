@@ -3,6 +3,7 @@ import Nav from "../components/Nav";
 import TechStack from "../components/TechStack";
 import envelope from "../assets/envelope.png";
 import TabIcon from "../components/TabIcon";
+import Footer from "../components/Footer";
 
 function About() {
   return (
@@ -77,6 +78,7 @@ function About() {
           />
         </div>
       </section>
+      <Footer />
     </>
   );
 }

@@ -6,6 +6,7 @@ import TabIcon from "../components/TabIcon";
 import Search from "../components/Search";
 import SearchResults from "../components/SearchResults";
 import axios from "axios";
+import Footer from "../components/Footer";
 
 function Compendium() {
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,7 @@ function Compendium() {
       </div>
 
       <SearchResults loading={loading} searchResults={searchResults} />
+      <Footer />
     </>
   );
 }
