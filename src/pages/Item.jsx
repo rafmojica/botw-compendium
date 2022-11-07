@@ -91,7 +91,7 @@ function Item() {
                 Cooking Effect: {capitalizeName(item.cooking_effect)}
               </h3>
             )}
-            {item.drops === [] ? null : item.drops.length > 0 ? (
+            {item.drops === [] ? null : item.drops?.length > 0 ? (
               <h3 className="text-sm text-center mt-2 md:text-base lg:text-lg">
                 Drops: {item.drops.join(", ")}
               </h3>
