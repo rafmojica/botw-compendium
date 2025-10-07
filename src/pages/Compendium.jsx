@@ -15,18 +15,20 @@ function Compendium() {
 
   async function fetchData() {
     const { data } = await axios.get(
-      "https://botw-compendium.herokuapp.com/api/v2/all"
+      "https://botw-compendium.herokuapp.com/api/v3/compendium/all"
     );
-    const arr = [
-      ...data.data.creatures.food,
-      ...data.data.creatures.non_food,
-      ...data.data.equipment,
-      ...data.data.materials,
-      ...data.data.monsters,
-      ...data.data.treasure,
-    ];
-    setItems(arr);
-    setSearchResults(arr.slice(0, 16));
+    console.log(data.data.map(thing => thing.name));
+    // const arr = [
+    //   ...data.data.creatures.food,
+    //   ...data.data.creatures.non_food,
+    //   ...data.data.equipment,
+    //   ...data.data.materials,
+    //   ...data.data.monsters,
+    //   ...data.data.treasure,
+    // ];
+    // setItems(arr);
+    setItems(data.data)
+    setSearchResults(data.data.slice(0, 16));
     setLoading(false);
   }
 

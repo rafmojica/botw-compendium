@@ -14,7 +14,7 @@ function Item() {
 
   async function fetchItem() {
     const { data } = await axios.get(
-      `https://botw-compendium.herokuapp.com/api/v2/entry/${id}`
+      `https://botw-compendium.herokuapp.com/api/v3/compendium/entry/${id}`
     );
     const response = data.data;
     setItem(response);
