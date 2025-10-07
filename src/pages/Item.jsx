@@ -91,13 +91,17 @@ function Item() {
                 Cooking Effect: {capitalizeName(item.cooking_effect)}
               </h3>
             )}
-            {item.drops === [] ? null : item.drops?.length > 0 ? (
+            {item.drops == [] ? null : item.drops?.length > 0 ? (
               <h3 className="text-sm text-center mt-2 md:text-base lg:text-lg">
                 Drops: {item.drops.join(", ")}
               </h3>
             ) : null}
-            <Stats item={item.attack} itemName="Attack" />
-            <Stats item={item.defense} itemName="Defense" />
+            {item.properties == undefined ? null : (
+              <>
+                <Stats item={item.properties.attack} itemName="Attack" />
+                <Stats item={item.properties.defense} itemName="Defense" />
+              </>
+            )}
           </div>
         </>
       )}
